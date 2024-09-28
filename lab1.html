@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Đăng Ký Người Dùng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        input[type="submit"],
+        input[type="button"] {
+            background: #35424a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background: #5a5a5a;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-container {
+            margin-top: 40px;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function setCurrentDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('created_at').value = today;
+            document.getElementById('updated_at').value = today;
+        }
+    </script>
+</head>
+<body onload="setCurrentDate()">
+
+<header>
+    <h1>Đăng Ký  Người Dùng</h1>
+</header>
+
+<div class="container">
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h2>Đăng Ký</h2>
+        <label for="username">Tên người dùng:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="full_name">Họ và tên:</label>
+        <input type="text" id="full_name" name="full_name" required>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="role">Vai trò:</label>
+        <select id="role" name="role" required>
+            <option value="">Chọn vai trò</option>
+            <option value="admin">Quản trị viên</option>
+            <option value="user">Người dùng</option>
+            <option value="moderator">Người điều hành</option>
+        </select>
+
+        <label for="profile_picture">Hình đại diện:</label>
+        <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
+
+        <label for="created_at">Ngày tạo tài khoản:</label>
+        <input type="text" id="created_at" name="created_at" readonly>
+
+        <label for="updated_at">Ngày cập nhật cuối cùng:</label>
+        <input type="text" id="updated_at" name="updated_at" readonly>
+
+        <input type="submit" value="Tạo tài khoản">
+        <input type="button" value="Hủy bỏ" onclick="window.location.href='/'">
+    </form>
+</div>
+
+
+
+<footer>
+    <p>© 2024 Giao diện đăng ký người dùng. Tất cả quyền được bảo lưu.</p>
+</footer>
+
+</body>
+</html>
