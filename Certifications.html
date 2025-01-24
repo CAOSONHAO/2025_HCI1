@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Learning Interface</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f3f4f6;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Header Section */
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .info a {
+      color: #555;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Tabs Section */
+    .tabs {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      font-size: 16px;
+      color: #6b7280;
+      text-decoration: none;
+      padding: 5px 0;
+    }
+
+    .tab.active {
+      color: #111827;
+      font-weight: bold;
+      border-bottom: 2px solid #111827;
+    }
+
+    /* Section Titles and Content */
+    .section {
+      margin-top: 20px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .badge-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .badge-container p {
+      color: #374151;
+    }
+
+    .badge-button {
+      background-color: #7c3aed;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .badge-button:hover {
+      background-color: #6d28d9;
+    }
+
+    /* Certification Section */
+    .certifications-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .certifications-header button {
+      background-color: #7c3aed;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .certifications-header button:hover {
+      background-color: #6d28d9;
+    }
+
+    .certifications {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .certification-card {
+      width: calc(50% - 10px);
+      background-color: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .certification-card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .certification-info {
+      font-size: 14px;
+    }
+
+    .certification-info h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #111827;
+    }
+
+    .certification-info p {
+      margin: 5px 0;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">My learning</div>
+    <div class="info">87hr 36min watched | <a href="#">View all activity</a></div>
+
+    <!-- Tabs Section -->
+    <div class="tabs">
+      <a href="All courses.html" class="tab">All courses</a>
+      <a href="learning-paths.html" class="tab">Learning paths</a>
+      <a href="Certifications.html" class="tab active">Certifications</a>
+      <a href="Archived.html" class="tab">Archived</a>
+      <a href="Learning tools.html" class="tab">Learning tools</a>
+    </div>
+
+    <!-- My Badges Section -->
+    <div class="section">
+      <div class="section-title">My badges</div>
+      <div class="badge-container">
+        <p>You have earned and uploaded <b>0 badges</b></p>
+        <button class="badge-button">Import new badge</button>
+      </div>
+      <p>Currently, there are no badges uploaded to your profile...</p>
+    </div>
+
+    <!-- Certification Preparation Section -->
+    <div class="section">
+      <div class="certifications-header">
+        <p>You are preparing for <b>4 certifications</b></p>
+        <button>Explore certification preparation</button>
+      </div>
+
+      <!-- Certifications List -->
+      <div class="certifications">
+        <div class="certification-card">
+          <img src="oracle-badge.png" alt="Oracle badge">
+          <div class="certification-info">
+            <h3>Oracle Certified Associate, Java SE 8 Programmer</h3>
+            <p>Oracle</p>
+          </div>
+        </div>
+        <div class="certification-card">
+          <img src="istqb-badge.png" alt="ISTQB badge">
+          <div class="certification-info">
+            <h3>ISTQB® Certified Tester Foundation Level (CTFL)</h3>
+            <p>Brightest</p>
+          </div>
+        </div>
+        <!-- Add additional certification cards here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
